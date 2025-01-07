@@ -6,12 +6,14 @@ import SignUp from "../Pages/SignUp/SignUp";
 import ServiceDetails from "../Pages/ServiceDeatils/ServiceDetails";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import CartDetails from "../Pages/CartDetails/CartDetails";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children : [
         {
             path: "/",
