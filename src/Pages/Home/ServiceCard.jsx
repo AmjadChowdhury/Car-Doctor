@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const ServiceCard = ({ service }) => {
   const { title, img, price } = service;
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div className="card bg-base-100 border-2 border-base-200">
       <figure className="px-10 pt-10 h-full">
         <img
           src={img}
