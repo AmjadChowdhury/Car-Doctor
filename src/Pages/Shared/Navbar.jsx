@@ -2,12 +2,13 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg"
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import './Navbar.css'
 const Navbar = () => {
     const navItems = <>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/login">Login</NavLink></li>
-        <li><NavLink to="/signup">sign up</NavLink></li>
-        <li><NavLink to="/cart">Cart</NavLink></li>
+        <NavLink to="/"><li className="text-lg p-2 rounded-lg font-extrabold">Home</li></NavLink>
+        <NavLink to="/login"><li className="text-lg p-2 rounded-lg font-extrabold">Login</li></NavLink>
+        <NavLink to="/signup"><li className="text-lg p-2 rounded-lg font-extrabold">sign up</li></NavLink>
+        <NavLink to="/cart"><li className="text-lg p-2 rounded-lg font-extrabold">Cart</li></NavLink>
     </>
 
     const {user,logOut} = useContext(AuthContext)
@@ -58,7 +59,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {
-          user? <button className="btn btn-outline btn-warning" onClick={handleLogout}>Logout</button> : <Link to="/login" className="btn btn-outline btn-warning">LogIn</Link>
+          user? <button className="btn btn-outline btn-warning text-lg font-extrabold" onClick={handleLogout}>Logout</button> : <Link to="/login" className="btn btn-outline btn-warning text-lg font-extrabold">LogIn</Link>
         }
       </div>
     </div>

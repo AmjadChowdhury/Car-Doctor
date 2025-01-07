@@ -12,8 +12,8 @@ const Banner = () => {
           className="w-full rounded-lg"
         />
          <div className="absolute h-full rounded-lg top-0 left-0 flex items-center bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
-          <div className="text-white space-y-7 w-1/3 ml-4">
-            <h2 className="text-6xl">Affordable Price For Car Servicing</h2>
+          <div className="text-white space-y-7 w-3/4 lg:w-1/3 ml-4">
+            <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
             <div>
                 <button className="btn btn-warning mr-6 text-white">Discover More</button>
@@ -36,8 +36,8 @@ const Banner = () => {
           className="w-full rounded-lg"
         />
         <div className="absolute h-full rounded-lg top-0 left-0 flex items-center bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
-          <div className="text-white space-y-7 w-1/3 ml-4">
-            <h2 className="text-6xl">Affordable Price For Car Servicing</h2>
+          <div className="text-white space-y-7 w-3/4 lg:w-1/3 ml-4">
+            <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
             <div>
                 <button className="btn btn-warning mr-6 text-white">Discover More</button>
@@ -60,8 +60,8 @@ const Banner = () => {
           className="w-full rounded-lg"
         />
         <div className="absolute h-full rounded-lg top-0 left-0 flex items-center bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
-          <div className="text-white space-y-7 w-1/3 ml-4">
-            <h2 className="text-6xl">Affordable Price For Car Servicing</h2>
+          <div className="text-white space-y-7 w-3/4 lg:w-1/3 ml-4">
+            <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
             <div>
                 <button className="btn btn-warning mr-6 text-white">Discover More</button>
@@ -84,8 +84,8 @@ const Banner = () => {
           className="w-full rounded-lg"
         />
         <div className="absolute h-full rounded-lg top-0 left-0 flex items-center bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
-          <div className="text-white space-y-7 w-1/3 ml-4">
-            <h2 className="text-6xl">Affordable Price For Car Servicing</h2>
+          <div className="text-white space-y-7 w-3/4 lg:w-1/3 ml-4">
+            <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
             <div>
                 <button className="btn btn-warning mr-6 text-white">Discover More</button>
