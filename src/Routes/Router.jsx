@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import ServiceDetails from "../Pages/ServiceDeatils/ServiceDetails";
 import CheckOut from "../Pages/CheckOut/CheckOut";
+import CartDetails from "../Pages/CartDetails/CartDetails";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
           path: "/bookings/:id",
           element: <CheckOut></CheckOut>,
           loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+        },
+        {
+          path: "/cart",
+          element: <CartDetails></CartDetails>
         }
       ]
     },

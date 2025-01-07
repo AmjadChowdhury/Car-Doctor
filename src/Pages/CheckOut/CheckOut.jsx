@@ -12,10 +12,13 @@ const CheckOut = () => {
     const form = e.target
     const name = form.name.value
     const title = loadedData.title
+    const img = loadedData.img
+    const price = loadedData.price
     const date = form.date.value
+    const message = form.message.value
     const email = user?.email
 
-    const order = {name,title,date,email}
+    const order = {name,title,date,email,img,price,message}
 
     fetch("http://localhost:5000/bookings",{
         method: "POST",
