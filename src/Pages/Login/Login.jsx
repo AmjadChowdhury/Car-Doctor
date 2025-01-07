@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import logimg from "../../assets/images/login/login.svg"
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+
+    const {signIn} = useContext(AuthContext)
 
     const handleLogin = e => {
         e.preventDefault()
@@ -8,6 +12,14 @@ const Login = () => {
         const email = form.email.value
         const password = form.password.value
         console.log(email,password)
+
+        signIn(email,password)
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error => {
+            console.log(error)
+        })
     }
   return (
     <div className="hero min-h-screen">
