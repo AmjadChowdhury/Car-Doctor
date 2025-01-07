@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const ServiceCard = ({ service }) => {
   const {_id, title, img, price } = service;
   return (
-    <Link to={`/service/${_id}`}>
     <div className="card bg-base-100 border-2 border-base-200">
       <figure className="px-10 pt-10 h-full">
         <img
@@ -15,6 +14,7 @@ const ServiceCard = ({ service }) => {
           className="rounded-xl"
         />
       </figure>
+      <Link to={`/service/${_id}`}>
       <div className="card-body items-center text-center">
         <h2 className="card-title text-2xl font-extrabold uppercase">{title}</h2>
         <div className="flex justify-between items-center text-xl font-bold uppercase text-yellow-500">
@@ -22,8 +22,8 @@ const ServiceCard = ({ service }) => {
             <p><FaRegArrowAltCircleRight></FaRegArrowAltCircleRight></p>
         </div>
       </div>
+      </Link>
     </div>
-    </Link>
   );
 };
 
