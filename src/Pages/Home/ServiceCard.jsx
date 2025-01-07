@@ -1,10 +1,12 @@
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
-  const { title, img, price } = service;
+  const {_id, title, img, price } = service;
   return (
+    <Link to={`/service/${_id}`}>
     <div className="card bg-base-100 border-2 border-base-200">
       <figure className="px-10 pt-10 h-full">
         <img
@@ -21,6 +23,7 @@ const ServiceCard = ({ service }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
