@@ -31,12 +31,12 @@ const router = createBrowserRouter([
         {
           path: "/service/:id",
           element: <ServiceDetails></ServiceDetails>,
-          loader: ({params}) => fetch(`https://car-doctor-server-amjadchowdhury-amjads-projects-e3710c92.vercel.app/services/${params.id}`)
+          loader: ({params}) => fetch(`https://car-doctor-server-wd9n.vercel.app/services/${params.id}`)
         },
         {
           path: "/bookings/:id",
           element: <CheckOut></CheckOut>,
-          loader: ({params}) => fetch(`https://car-doctor-server-amjadchowdhury-amjads-projects-e3710c92.vercel.app/services/${params.id}`)
+          loader: ({params}) => fetch(`https://car-doctor-server-wd9n.vercel.app/services/${params.id}`)
         },
         {
           path: "/cart",

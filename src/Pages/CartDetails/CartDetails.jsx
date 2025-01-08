@@ -7,7 +7,7 @@ const CartDetails = () => {
 
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
-    fetch(`https://car-doctor-server-amjadchowdhury-amjads-projects-e3710c92.vercel.app/bookings?email=${user.email}`)
+    fetch(`https://car-doctor-server-wd9n.vercel.app/bookings?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
