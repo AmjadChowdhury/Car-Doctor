@@ -1,5 +1,6 @@
 import About from "./About";
 import Banner from "./Banner";
+import CustomerRev from "./CustomerRev";
 import Features from "./Features";
 import Products from "./Products";
 import Services from "./Services";
@@ -15,6 +16,7 @@ const Home = () => {
             <Products></Products>
             <Team></Team>
             <Features></Features>
+            <CustomerRev></CustomerRev>
         </div>
     );
 };
