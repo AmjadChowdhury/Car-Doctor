@@ -31,12 +31,12 @@ const router = createBrowserRouter([
         {
           path: "/service/:id",
           element: <ServiceDetails></ServiceDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+          loader: ({params}) => fetch(`https://car-doctor-server-three-topaz.vercel.app/services/${params.id}`)
         },
         {
           path: "/bookings/:id",
           element: <CheckOut></CheckOut>,
-          loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+          loader: ({params}) => fetch(`https://car-doctor-server-three-topaz.vercel.app/services/${params.id}`)
         },
         {
           path: "/cart",
