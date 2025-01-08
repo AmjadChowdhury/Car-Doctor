@@ -12,9 +12,9 @@ const ServiceDetails = () => {
         <div>
             <div className="grid grid-cols-1 lg:grid-cols-3">
                 <div className="lg:col-span-2">
-                    <img src={img} alt="" className="w-full" />
-                    <h1 className="text-3xl font-bold my-4">{title}</h1>
-                    <p className="my-2">{description}</p>
+                    <img src={img} alt="" className="w-full rounded-lg" />
+                    <h1 className="text-4xl font-extrabold m-2">{title}</h1>
+                    <p className="m-2">{description}</p>
                     <div className="grid grid-cols-2 gap-4">
                         {
                             facility.map((fac,idx) => <Facilities 

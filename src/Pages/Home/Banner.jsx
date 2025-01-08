@@ -16,7 +16,7 @@ const Banner = () => {
             <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
             <div>
-                <button className="btn bg-orange-500 font-extrabold mr-6 text-white border-orange-200 border-2">Discover More</button>
+                <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
                 <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
             </div>
           </div>
@@ -40,7 +40,7 @@ const Banner = () => {
             <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
             <div>
-                <button className="btn bg-orange-500 font-extrabold mr-6 text-white border-orange-200 border-2">Discover More</button>
+                <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
                 <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Banner = () => {
             <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
             <div>
-                <button className="btn bg-orange-500 font-extrabold mr-6 text-white border-orange-200 border-2">Discover More</button>
+                <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
                 <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
             </div>
           </div>
@@ -88,7 +88,7 @@ const Banner = () => {
             <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
             <div>
-                <button className="btn bg-orange-500 font-extrabold mr-6 text-white border-orange-200 border-2">Discover More</button>
+                <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
                 <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
             </div>
           </div>

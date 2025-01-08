@@ -11,7 +11,7 @@ const ServiceRight = ({serviceCollection}) => {
     
     
   return (
-    <div className="m-4">
+    <div className="mx-4">
       <div className="bg-base-200 rounded-lg flex flex-col gap-2 p-4">
         <h1 className="text-orange-500 font-extrabold text-2xl text-center mb-2">
           Services
@@ -75,7 +75,7 @@ const ServiceRight = ({serviceCollection}) => {
 
       <div className="space-y-2">
         <p className="text-2xl font-bold flex items-center">Price : <FaDollarSign></FaDollarSign>{price}</p>
-        <Link to={`/bookings/${_id}`}><button className="btn btn-block bg-orange-500 text-white text-lg font-extrabold">Proceed Checkout</button></Link>
+        <Link to={`/bookings/${_id}`}><button className="btn btn-block bg-orange-500 text-white text-lg font-extrabold my-2">Proceed Checkout</button></Link>
         
       </div>
     </div>
