@@ -4,14 +4,17 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import './Navbar.css'
 const Navbar = () => {
+    const {user,logOut} = useContext(AuthContext)
     const navItems = <>
         <NavLink to="/"><li className="text-lg p-2 rounded-lg font-extrabold">Home</li></NavLink>
-        <NavLink to="/login"><li className="text-lg p-2 rounded-lg font-extrabold">Login</li></NavLink>
-        <NavLink to="/signup"><li className="text-lg p-2 rounded-lg font-extrabold">sign up</li></NavLink>
+        {
+          !user && <>
+          <NavLink to="/login"><li className="text-lg p-2 rounded-lg font-extrabold">Login</li></NavLink>
+          <NavLink to="/signup"><li className="text-lg p-2 rounded-lg font-extrabold">sign up</li></NavLink>
+          </>
+        }   
         <NavLink to="/cart"><li className="text-lg p-2 rounded-lg font-extrabold">Cart</li></NavLink>
     </>
-
-    const {user,logOut} = useContext(AuthContext)
     const handleLogout = () => {
         logOut()
         .then(() => {
@@ -59,7 +62,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {
-          user? <button className="btn btn-outline btn-warning text-lg font-extrabold" onClick={handleLogout}>Logout</button> : <Link to="/login" className="btn btn-outline btn-warning text-lg font-extrabold">LogIn</Link>
+          user? <button className="btn btn-outline text-orange-500 border-2 border-orange-500 text-lg font-extrabold" onClick={handleLogout}>Logout</button> : <Link to="/login" className="btn btn-outline text-orange-500 border-2 border-orange-500 text-lg font-extrabold">LogIn</Link>
         }
       </div>
     </div>

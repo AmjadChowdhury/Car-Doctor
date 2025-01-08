@@ -12,9 +12,9 @@ const Services = () => {
     return (
         <div>
             <div className="text-center">
-                <h1 className="text-5xl font-bold text-yellow-500">Services</h1>
+                <h1 className="text-5xl font-extrabold text-orange-500">Services</h1>
                 <p className="text-4xl font-bold mt-4">Our services Area</p>
-                <p className="mt-2 mb-6 w-1/2 m-auto">the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. </p>
+                <p className="mt-2 mb-6 w-full lg:w-1/2 m-auto">the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
             {
