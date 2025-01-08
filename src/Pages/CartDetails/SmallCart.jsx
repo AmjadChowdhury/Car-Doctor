@@ -17,7 +17,7 @@ const SmallCart = ({ cart,cartItems, setCartItems }) => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://car-doctor-server-three-topaz.vercel.app/bookings/${_id}`,{
+        fetch(`https://car-doctor-server-amjadchowdhury-amjads-projects-e3710c92.vercel.app/bookings/${_id}`,{
           method: 'DELETE'
       })
       .then(()=>{
