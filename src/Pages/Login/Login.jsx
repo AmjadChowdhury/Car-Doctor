@@ -33,7 +33,7 @@ const Login = () => {
             });
             Toast.fire({
               icon: "success",
-              title: `${result.user.email} Signed in successfully`
+              title: `${result.user.displayName || result.user.email} Signed in successfully`
             });
             form.reset()
             navigate("/")
