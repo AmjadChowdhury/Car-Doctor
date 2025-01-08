@@ -1,21 +1,41 @@
 import PropTypes from "prop-types";
 import { ImCross } from "react-icons/im";
+import Swal from "sweetalert2";
 
 const SmallCart = ({ cart,cartItems, setCartItems }) => {
   const { _id,title, date, img, message, price } = cart;
 
   const handleDelete = () =>{
-    fetch(`http://localhost:5000/bookings/${_id}`,{
-        method: 'DELETE'
-    })
-    .then(()=>{
-        alert('delte success')
-        const reaminingItem = cartItems.filter(cart => cart._id !==_id)
-        setCartItems(reaminingItem)
-    })
-    .catch(error => {
-        console.log(error)
-    })
+
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/bookings/${_id}`,{
+          method: 'DELETE'
+      })
+      .then(()=>{
+          const reaminingItem = cartItems.filter(cart => cart._id !==_id)
+          setCartItems(reaminingItem)
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          });
+      })
+      .catch(error => {
+          console.log(error)
+      })
+      }
+    });
+
+
   }
   return (
     <tr>

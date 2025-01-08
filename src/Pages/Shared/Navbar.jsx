@@ -1,29 +1,39 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/logo.svg"
+import logo from "../../assets/logo.svg";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import './Navbar.css'
+import "./Navbar.css";
 const Navbar = () => {
-    const {user,logOut} = useContext(AuthContext)
-    const navItems = <>
-        <NavLink to="/"><li className="text-lg p-2 rounded-lg font-extrabold">Home</li></NavLink>
-        {
-          !user && <>
-          <NavLink to="/login"><li className="text-lg p-2 rounded-lg font-extrabold">Login</li></NavLink>
-          <NavLink to="/signup"><li className="text-lg p-2 rounded-lg font-extrabold">sign up</li></NavLink>
-          </>
-        }   
-        <NavLink to="/cart"><li className="text-lg p-2 rounded-lg font-extrabold">Cart</li></NavLink>
+  const { user, logOut } = useContext(AuthContext);
+  const navItems = (
+    <>
+      <NavLink to="/">
+        <li className="text-lg p-2 rounded-lg font-extrabold">Home</li>
+      </NavLink>
+      {!user && (
+        <>
+          <NavLink to="/login">
+            <li className="text-lg p-2 rounded-lg font-extrabold">Login</li>
+          </NavLink>
+          <NavLink to="/signup">
+            <li className="text-lg p-2 rounded-lg font-extrabold">sign up</li>
+          </NavLink>
+        </>
+      )}
+      <NavLink to="/cart">
+        <li className="text-lg p-2 rounded-lg font-extrabold">Cart</li>
+      </NavLink>
     </>
-    const handleLogout = () => {
-        logOut()
-        .then(() => {
-          console.log('logout succesfull')
-        })
-        .catch(error => {
-          console.log(error)
-        })
-    }
+  );
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        console.log("logout succesfull");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -52,18 +62,39 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-            <img src={logo} alt="" />
+          <img src={logo} alt="" />
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navItems}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{navItems}</ul>
       </div>
       <div className="navbar-end">
-        {
-          user? <button className="btn btn-outline text-orange-500 border-2 border-orange-500 text-lg font-extrabold" onClick={handleLogout}>Logout</button> : <Link to="/login" className="btn btn-outline text-orange-500 border-2 border-orange-500 text-lg font-extrabold">LogIn</Link>
-        }
+        {user && (
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle avatar mr-2"
+          >
+            <div className="w-10 rounded-full">
+              <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+            </div>
+          </div>
+        )}
+        {user ? (
+          <button
+            className="btn btn-outline text-orange-500 border-2 border-orange-500 text-lg font-extrabold"
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
+        ) : (
+          <Link
+            to="/login"
+            className="btn btn-outline text-orange-500 border-2 border-orange-500 text-lg font-extrabold"
+          >
+            LogIn
+          </Link>
+        )}
       </div>
     </div>
   );

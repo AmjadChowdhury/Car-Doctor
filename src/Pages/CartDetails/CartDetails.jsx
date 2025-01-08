@@ -16,7 +16,7 @@ const CartDetails = () => {
   }, [user]);
   return (
     <div className="overflow-x-auto">
-        <h1 className="text-2xl font-extrabold text-center">Cart info of <span className="text-orange-500">{user?.email}</span></h1>
+        <h1 className="text-2xl font-extrabold text-center">Cart info of <span className="text-orange-500">{user?.displayName}</span></h1>
       <table className="table">
         <tbody>
           {/* row 1 */}

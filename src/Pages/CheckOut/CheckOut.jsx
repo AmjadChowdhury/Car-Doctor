@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const CheckOut = () => {
 
@@ -30,11 +31,18 @@ const CheckOut = () => {
     .then(res => res.json())
     .then(data => {
         console.log(data)
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your order has been saved in cart",
+          showConfirmButton: false,
+          timer: 1500
+        });
     })
 
   };
   return (
-    <div>
+    <div className="mb-4">
       <div className="card bg-base-100 w-full  shrink-0 border-2 border-orange-200">
         <form className="card-body" onSubmit={handleCheckOut}>
           <div className="flex flex-col lg:flex-row gap-2">
@@ -45,6 +53,7 @@ const CheckOut = () => {
               <input
                 name="name"
                 type="text"
+                defaultValue={user.displayName}
                 placeholder="name"
                 className="input input-bordered"
                 required

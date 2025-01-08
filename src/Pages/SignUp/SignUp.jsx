@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import logimg from "../../assets/images/login/login.svg"
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
+import { updateProfile } from "firebase/auth";
+import auth from "../../Firebase/firebase.config";
 
 const SignUp = () => {
 
@@ -9,6 +12,8 @@ const SignUp = () => {
     const handleSignUp = e => {
         e.preventDefault()
         const form = e.target
+        const name = form.name.value
+        const photo = form.photo.value
         const email = form.email.value
         const password = form.password.value
         console.log(email,password)
@@ -16,6 +21,22 @@ const SignUp = () => {
         createUser(email,password)
         .then(result => {
             console.log(result.user)
+            updateProfile(auth.currentUser,{
+              displayName: name,
+              photoURL: photo
+            })
+            .then(()=> {
+              console.log('profile update')
+            })
+            .catch(error => {
+              console.log(error)
+            })
+            Swal.fire({
+              title: `${name} register account successfully`,
+              text: 'Now,you can log In',
+              icon: 'success',
+              confirmButtonText: 'Cool'
+            })
             form.reset()
         })
         .catch(error => {
