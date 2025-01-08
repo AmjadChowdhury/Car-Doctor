@@ -7,6 +7,7 @@ import ServiceDetails from "../Pages/ServiceDeatils/ServiceDetails";
 import CheckOut from "../Pages/CheckOut/CheckOut";
 import CartDetails from "../Pages/CartDetails/CartDetails";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/cart",
-          element: <CartDetails></CartDetails>
+          element: <PrivateRoute><CartDetails></CartDetails></PrivateRoute>
         }
       ]
     },
