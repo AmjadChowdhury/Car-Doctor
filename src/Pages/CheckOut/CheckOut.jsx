@@ -21,7 +21,7 @@ const CheckOut = () => {
 
     const order = {name,title,date,email,img,price,message}
 
-    fetch("https://car-doctor-server-wd9n.vercel.app/bookings",{
+    fetch("https://car-doctor-server-three-topaz.vercel.app/bookings",{
         method: "POST",
         headers: {
             'content-type': 'application/json'
