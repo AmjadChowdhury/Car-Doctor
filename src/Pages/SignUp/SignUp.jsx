@@ -1,48 +1,62 @@
 import { useContext } from "react";
-import logimg from "../../assets/images/login/login.svg"
+import logimg from "../../assets/images/login/login.svg";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { updateProfile } from "firebase/auth";
 import auth from "../../Firebase/firebase.config";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
+  const { createUser } = useContext(AuthContext);
 
-    const {createUser} = useContext(AuthContext)
-
-    const handleSignUp = e => {
-        e.preventDefault()
-        const form = e.target
-        const name = form.name.value
-        const photo = form.photo.value
-        const email = form.email.value
-        const password = form.password.value
-        console.log(email,password)
-
-        createUser(email,password)
-        .then(result => {
-            console.log(result.user)
-            updateProfile(auth.currentUser,{
-              displayName: name,
-              photoURL: photo
-            })
-            .then(()=> {
-              console.log('profile update')
-            })
-            .catch(error => {
-              console.log(error)
-            })
-            Swal.fire({
-              title: `${name} register account successfully`,
-              text: 'Now,you can log In',
-              icon: 'success',
-              confirmButtonText: 'Cool'
-            })
-            form.reset()
-        })
-        .catch(error => {
-            console.log(error)
-        })
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+    if(password.length<6){
+      return Swal.fire({
+        icon: "error",
+        title: `Oops...${name}`,
+        text: "Password must be greater than six character!!"
+      });
     }
+    if(!/[A-Z]/.test(password)){
+      return Swal.fire({
+        icon: "error",
+        title: `Oops...${name}`,
+        text: "Password must have one uppercase letter!!"
+      });
+    }
+
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        updateProfile(auth.currentUser, {
+          displayName: name,
+          photoURL: photo,
+        })
+          .then(() => {
+            console.log("profile update");
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        Swal.fire({
+          title: `${name} register account successfully`,
+          text: "Now,you can log In",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
+        form.reset();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row items-center">
@@ -99,8 +113,20 @@ const SignUp = () => {
                 required
               />
             </div>
+            <div>
+              <h1 className="text-center text-sm font-bold">
+                Already have an accout !!Plaese
+                <Link to="/login" className="text-orange-500">
+                  LogIn
+                </Link>
+              </h1>
+            </div>
             <div className="form-control mt-6">
-              <input type="submit" value="Sign Up" className="btn bg-orange-500 text-white text-lg font-extrabold" />
+              <input
+                type="submit"
+                value="Sign Up"
+                className="btn bg-orange-500 text-white text-lg font-extrabold"
+              />
             </div>
           </form>
         </div>

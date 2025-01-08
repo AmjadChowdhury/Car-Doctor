@@ -2,7 +2,7 @@ import { useContext } from "react";
 import logimg from "../../assets/images/login/login.svg"
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
@@ -88,11 +88,9 @@ const Login = () => {
                 className="input input-bordered"
                 required
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover text-sm text-orange-500">
-                  Forgot password?
-                </a>
-              </label>
+            </div>
+            <div>
+              <h1 className="text-center text-sm font-bold">You have no accout ?Plaese <Link to="/signup" className="text-orange-500">Register</Link></h1>
             </div>
             <div className="form-control mt-6">
               <input type="submit" value="LogIn" className="btn bg-orange-500 text-white text-lg font-extrabold" />
