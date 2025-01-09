@@ -8,7 +8,10 @@ import Swal from "sweetalert2";
 const PrivateRoute = ({children}) => {
     const {user,loading} = useContext(AuthContext)
     if(loading){
-        return <span className="loading loading-bars loading-lg"></span>
+        return <div className="justify-center my-2 flex items-center">
+        <span className="loading loading-bars loading-md mr-2"></span>
+        <span className="text-orange-500 font-bold">ektu wait koro...</span>
+    </div>
     }
     if(user){
         return children
