@@ -9,9 +9,7 @@ const Team = () => {
         <h1 className="text-5xl font-extrabold text-orange-500">Team</h1>
         <p className="text-4xl font-bold mt-4">Meet Our Team</p>
         <p className="mt-2 mb-6 w-full lg:w-1/2 m-auto">
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which do not look even slightly
-          believable.
+        Meet the passionate professionals behind CarDoctor! Our skilled and dedicated team works tirelessly to deliver exceptional service, ensuring your car gets the care it deserves.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

@@ -11,7 +11,7 @@ const Features = () => {
             <div className="text-center">
                 <h1 className="text-5xl font-extrabold text-orange-500">Core Featurs</h1>
                 <p className="text-4xl font-bold mt-4">Why Choose us</p>
-                <p className="mt-2 mb-6 w-full lg:w-1/2 m-auto">the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. </p>
+                <p className="mt-2 mb-6 w-full lg:w-1/2 m-auto">CarDoctor provides expert car repair and maintenance services to keep your vehicle running smoothly. With skilled mechanics and modern tools, we ensure quality and reliability every time.</p>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-6 gap-4">
                 <div className="border-2 border-base-200 rounded-lg p-2">

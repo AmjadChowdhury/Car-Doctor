@@ -12,9 +12,7 @@ const CustomerRev = () => {
         </h1>
         <p className="text-4xl font-bold mt-4">What Customer Says</p>
         <p className="mt-2 mb-6 w-full lg:w-1/2 m-auto">
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which do not look even slightly
-          believable.
+        Would you like something more creative or specific to your garage?
         </p>
       </div>
       <div className="flex flex-col lg:flex-row gap-4">
@@ -30,10 +28,7 @@ const CustomerRev = () => {
             <LuQuote className="text-2xl text-orange-500"></LuQuote>
           </div>
           <p>
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which do not look even slightly
-            believable.
+          I recently took my car to CarDoctor, and I am thoroughly impressed with the service! The staff were friendly and professional, and they explained the entire process in detail. My car feels as good as new, and they completed the service on time. The waiting area was clean and comfortable, which was a bonus. Highly recommend CarDoctor for anyone needing reliable car services!
           </p>
           <div className="flex gap-2">
             <FaStar className="text-orange-500 text-xl"></FaStar>
@@ -55,10 +50,7 @@ const CustomerRev = () => {
             <LuQuote className="text-2xl text-orange-500"></LuQuote>
           </div>
           <p>
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which do not look even slightly
-            believable.
+          CarDoctor is the best garage I’ve been to! I brought my car in for brake repairs, and they did a fantastic job. The mechanics were knowledgeable and took the time to explain what needed to be fixed. The pricing was fair, and they finished the job quicker than I expected. My car is running perfectly now. Definitely my go-to place for any car issues. Highly recommend!
           </p>
           <div className="flex gap-2">
             <FaStar className="text-orange-500 text-xl"></FaStar>

@@ -19,10 +19,10 @@ const About = () => {
           <h1 className="text-5xl font-extrabold text-orange-500">About Us!</h1>
           <h1 className="font-bold text-4xl mt-4">We are qualified & of experience in this field</h1>
           <p className="py-6">
-          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. 
+          At CarDoctor, we are committed to providing exceptional car care services with a focus on quality, trust, and customer satisfaction. With skilled professionals and modern tools, we ensure your vehicle stays in top condition, giving you peace of mind on the road. 
           </p>
           {
-            moreMsg && <p className="pb-2">the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. </p>
+            moreMsg && <p className="pb-2">Driven by passion and expertise, CarDoctor strives to be your trusted partner for all your car repair and maintenance needs.</p>
           }
           <button className={`btn bg-orange-500 font-extrabold text-white`} onClick={handleMore}>{`${moreMsg? 'Less Info': 'Get More Info'}`}</button>
         </div>

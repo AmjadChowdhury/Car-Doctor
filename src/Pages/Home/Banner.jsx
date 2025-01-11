@@ -14,7 +14,7 @@ const Banner = () => {
          <div className="absolute h-full rounded-lg top-0 left-0 flex items-center bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
           <div className="text-white space-y-7 w-3/4 lg:w-1/3 ml-4">
             <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
-            <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
+            <p className="text-xl">Keep your car in top shape with CarDoctor – expert service, trusted care, and reliable performance every time!</p>
             <div>
                 <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
                 <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
@@ -38,7 +38,7 @@ const Banner = () => {
         <div className="absolute h-full rounded-lg top-0 left-0 flex items-center bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
           <div className="text-white space-y-7 w-3/4 lg:w-1/3 ml-4">
             <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
-            <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
+            <p className="text-xl">Keep your car in top shape with CarDoctor – expert service, trusted care, and reliable performance every time!</p>
             <div>
                 <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
                 <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
@@ -62,7 +62,7 @@ const Banner = () => {
         <div className="absolute h-full rounded-lg top-0 left-0 flex items-center bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
           <div className="text-white space-y-7 w-3/4 lg:w-1/3 ml-4">
             <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
-            <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
+            <p className="text-xl">Keep your car in top shape with CarDoctor – expert service, trusted care, and reliable performance every time!</p>
             <div>
                 <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
                 <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
@@ -86,7 +86,7 @@ const Banner = () => {
         <div className="absolute h-full rounded-lg top-0 left-0 flex items-center bg-gradient-to-r from-[#151515] to-[rgba(21,21,21,0)]">
           <div className="text-white space-y-7 w-3/4 lg:w-1/3 ml-4">
             <h2 className="text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
-            <p className="text-xl">There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
+            <p className="text-xl">Keep your car in top shape with CarDoctor – expert service, trusted care, and reliable performance every time!</p>
             <div>
                 <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
                 <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
