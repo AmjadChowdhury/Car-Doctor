@@ -90,13 +90,13 @@ const CheckOut = () => {
             </div>
             <div className="form-control flex-1">
               <label className="label">
-                <span className="label-text text-xl font-bold">Date</span>
+                <span className="label-text text-xl font-bold">Delibary Date</span>
               </label>
               <input
                 name="date"
                 type="date"
                 placeholder=""
-                className="input input-bordered"
+                className="input input-bordered w-full"
                 required
               />
             </div>
@@ -106,8 +106,8 @@ const CheckOut = () => {
             <input
               name="message"
               type="text"
-              placeholder="Enter Your Message"
-              className="input input-bordered flex-1 h-28"
+              placeholder="Any Suggestion"
+              className="input input-bordered flex-1 mt-5"
               required
             />
           </div>
