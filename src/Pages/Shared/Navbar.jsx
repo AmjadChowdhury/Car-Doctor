@@ -89,6 +89,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user && (
+          <Link to="/userInfo">
           <div
             tabIndex={0}
             role="button"
@@ -98,6 +99,7 @@ const Navbar = () => {
               <img alt="Chobi nai kno!" src={user.photoURL} />
             </div>
           </div>
+          </Link>
         )}
         {user ? (
           <button

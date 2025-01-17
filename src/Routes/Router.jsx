@@ -8,6 +8,7 @@ import CheckOut from "../Pages/CheckOut/CheckOut";
 import CartDetails from "../Pages/CartDetails/CartDetails";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
+import UserInfo from "../Pages/UserInfo/UserInfo";
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         {
           path: "/cart",
           element: <PrivateRoute><CartDetails></CartDetails></PrivateRoute>
+        },
+        {
+          path: "/userInfo",
+          element: <UserInfo></UserInfo>
         }
       ]
     },
