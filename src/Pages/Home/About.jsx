@@ -16,8 +16,8 @@ const About = () => {
           <img src={parts} className="w-1/2 absolute right-5 top-1/2 border-8 border-white rounded-lg shadow-2xl" />
         </div>
         <div className="lg:w-1/2 mt-10">
-          <h1 className="text-5xl font-extrabold text-orange-500">About Us!</h1>
-          <h1 className="font-bold text-4xl mt-4">We are qualified & of experience in this field</h1>
+          <h1 className="text-3xl lg:text-5xl font-extrabold text-orange-500">About Us!</h1>
+          <h1 className="font-bold text-2xl lg:text-4xl mt-4">We are qualified & of experience in this field</h1>
           <p className="py-6">
           At CarDoctor, we are committed to providing exceptional car care services with a focus on quality, trust, and customer satisfaction. With skilled professionals and modern tools, we ensure your vehicle stays in top condition, giving you peace of mind on the road. 
           </p>

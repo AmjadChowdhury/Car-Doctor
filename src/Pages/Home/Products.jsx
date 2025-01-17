@@ -4,7 +4,6 @@ import prod3 from "../../assets/images/products/3.png"
 import prod4 from "../../assets/images/products/4.png"
 import prod5 from "../../assets/images/products/5.png"
 import prod6 from "../../assets/images/products/6.png"
-import { FaDollarSign } from "react-icons/fa";
 
 const Products = () => {
   return (

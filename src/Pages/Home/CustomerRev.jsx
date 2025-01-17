@@ -7,10 +7,10 @@ const CustomerRev = () => {
   return (
     <div className="my-4">
       <div className="text-center">
-        <h1 className="text-5xl font-extrabold text-orange-500">
+        <h1 className="text-3xl lg:text-5xl font-extrabold text-orange-500">
           Testimonial
         </h1>
-        <p className="text-4xl font-bold mt-4">What Customer Says</p>
+        <p className="text-2xl lg:text-4xl font-bold mt-4">What Customer Says</p>
         <p className="mt-2 mb-6 w-full lg:w-1/2 m-auto">
         Would you like something more creative or specific to your garage?
         </p>

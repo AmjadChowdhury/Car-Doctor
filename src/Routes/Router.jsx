@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/service/:id",
-          element: <ServiceDetails></ServiceDetails>,
+          element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
           loader: ({params}) => fetch(`https://car-doctor-server-three-topaz.vercel.app/services/${params.id}`)
         },
         {

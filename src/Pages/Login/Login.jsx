@@ -2,12 +2,13 @@ import { useContext } from "react";
 import logimg from "../../assets/images/login/login.svg"
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
 
     const {signIn} = useContext(AuthContext)
+    const location = useLocation()
     const navigate = useNavigate()
 
     const handleLogin = e => {
@@ -15,11 +16,9 @@ const Login = () => {
         const form = e.target
         const email = form.email.value
         const password = form.password.value
-        console.log(email,password)
 
         signIn(email,password)
         .then(result => {
-            console.log(result.user)
             const Toast = Swal.mixin({
               toast: true,
               position: "top-end",
@@ -36,10 +35,9 @@ const Login = () => {
               title: `${result.user.displayName || result.user.email} Signed in successfully`
             });
             form.reset()
-            navigate("/")
+            navigate(location?.state ? location?.state : "/")
         })
         .catch(error => {
-            console.log(error)
             const Toast = Swal.mixin({
               toast: true,
               position: "top-end",
