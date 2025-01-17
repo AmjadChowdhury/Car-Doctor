@@ -17,20 +17,15 @@ const Products = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="card bg-base-100 border-2 border-b-4 border-b-[#000080] border-base-200">
           <figure className="px-10 pt-10 h-full">
             <img src={prod1} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-extrabold uppercase">
+            <h2 className="card-title text-md font-extrabold uppercase">
             Cools Led Light
             </h2>
-            <div className="flex justify-between items-center text-xl font-bold uppercase text-orange-500">
-              <p className="flex items-center mr-10">
-                Price : <FaDollarSign></FaDollarSign> {200}
-              </p>
-            </div>
           </div>
         </div>
         <div className="card bg-base-100 border-2 border-b-4 border-b-[#000080] border-base-200">
@@ -38,14 +33,9 @@ const Products = () => {
             <img src={prod2} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-extrabold uppercase">
+            <h2 className="card-title text-md font-extrabold uppercase">
             Cools Led Light
             </h2>
-            <div className="flex justify-between items-center text-xl font-bold uppercase text-orange-500">
-              <p className="flex items-center mr-10">
-                Price : <FaDollarSign></FaDollarSign> {300}
-              </p>
-            </div>
           </div>
         </div>
         <div className="card bg-base-100 border-2 border-b-4 border-b-[#000080] border-base-200">
@@ -53,14 +43,9 @@ const Products = () => {
             <img src={prod3} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-extrabold uppercase">
+            <h2 className="card-title text-md font-extrabold uppercase">
               Car Engine Filter
             </h2>
-            <div className="flex justify-between items-center text-xl font-bold uppercase text-orange-500">
-              <p className="flex items-center mr-10">
-                Price : <FaDollarSign></FaDollarSign> {500}
-              </p>
-            </div>
           </div>
         </div>
         <div className="card bg-base-100 border-2 border-b-4 border-b-[#000080] border-base-200">
@@ -68,14 +53,9 @@ const Products = () => {
             <img src={prod4} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-extrabold uppercase">
+            <h2 className="card-title text-md font-extrabold uppercase">
               Car Engine Plug
             </h2>
-            <div className="flex justify-between items-center text-xl font-bold uppercase text-orange-500">
-              <p className="flex items-center mr-10">
-                Price : <FaDollarSign></FaDollarSign> {200}
-              </p>
-            </div>
           </div>
         </div>
         <div className="card bg-base-100 border-2 border-b-4 border-b-[#000080] border-base-200">
@@ -83,14 +63,9 @@ const Products = () => {
             <img src={prod5} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-extrabold uppercase">
+            <h2 className="card-title text-md font-extrabold uppercase">
               Car Engine Plug
             </h2>
-            <div className="flex justify-between items-center text-xl font-bold uppercase text-orange-500">
-              <p className="flex items-center mr-10">
-                Price : <FaDollarSign></FaDollarSign> {200}
-              </p>
-            </div>
           </div>
         </div>
         <div className="card bg-base-100 border-2 border-b-4 border-b-[#000080] border-base-200">
@@ -98,14 +73,9 @@ const Products = () => {
             <img src={prod6} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-extrabold uppercase">
+            <h2 className="card-title text-md font-extrabold uppercase">
               Car Engine Plug
             </h2>
-            <div className="flex justify-between items-center text-xl font-bold uppercase text-orange-500">
-              <p className="flex items-center mr-10">
-                Price : <FaDollarSign></FaDollarSign> {200}
-              </p>
-            </div>
           </div>
         </div>
       </div>
