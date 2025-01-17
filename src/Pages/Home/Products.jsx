@@ -9,8 +9,8 @@ const Products = () => {
   return (
     <div>
       <div className="text-center">
-        <h1 className="text-5xl font-extrabold text-orange-500">Popular Products</h1>
-        <p className="text-4xl font-bold mt-4">Browse Our Products</p>
+        <h1 className="text-3xl lg:text-5xl font-extrabold text-orange-500">Popular Products</h1>
+        <p className="text-2xl lg:text-4xl font-bold mt-4">Browse Our Products</p>
         <p className="mt-2 mb-6 w-full lg:w-1/2 m-auto">
         Explore our popular products designed to enhance your car has performance and style. From premium accessories to essential maintenance tools, we’ve got everything your vehicle needs!
         </p>
