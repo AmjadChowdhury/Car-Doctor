@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Navigate, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
-import Swal from "sweetalert2";
 
 
 const PrivateRoute = ({children}) => {
@@ -17,11 +16,6 @@ const PrivateRoute = ({children}) => {
     if(user){
         return children
     }
-    Swal.fire({
-        title: "Can not access?",
-        text: "LogIn Your Account",
-        icon: "question"
-      });
     return <>
     <Navigate to="/login" state={location.pathname}></Navigate>
     </>

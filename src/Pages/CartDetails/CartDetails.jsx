@@ -10,7 +10,6 @@ const CartDetails = () => {
     fetch(`https://car-doctor-server-three-topaz.vercel.app/bookings?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setCartItems(data);
       });
   }, [user]);

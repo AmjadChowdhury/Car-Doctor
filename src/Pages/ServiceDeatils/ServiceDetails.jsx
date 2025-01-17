@@ -6,8 +6,6 @@ import ServiceRight from "./ServiceRight";
 const ServiceDetails = () => {
     const serviceCollection = useLoaderData()
     const { title,img,description,facility } = serviceCollection
-    console.log(serviceCollection)
-    console.log(facility)
     return (
         <div>
             <div className="grid grid-cols-1 lg:grid-cols-3">

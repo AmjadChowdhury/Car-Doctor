@@ -1,10 +1,12 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import "./Navbar.css";
+import Swal from "sweetalert2";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const navigate = useNavigate()
   const navItems = (
     <>
       <NavLink to="/">
@@ -20,15 +22,32 @@ const Navbar = () => {
           </NavLink>
         </>
       )}
-      <NavLink to="/cart">
+      {
+        user && <NavLink to="/cart">
         <li className="text-lg p-2 rounded-lg font-extrabold">Cart</li>
       </NavLink>
+      }
     </>
   );
   const handleLogout = () => {
     logOut()
       .then(() => {
-        console.log("logout succesfull");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          }
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Logout Successfully Done!"
+        });
+        navigate("/")
       })
       .catch((error) => {
         console.log(error);

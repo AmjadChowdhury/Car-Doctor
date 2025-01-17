@@ -16,7 +16,6 @@ const SignUp = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
     if(password.length<6){
       return Swal.fire({
         icon: "error",

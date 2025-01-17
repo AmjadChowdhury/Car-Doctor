@@ -7,7 +7,6 @@ const CheckOut = () => {
 
   const {user} = useContext(AuthContext)
   const loadedData = useLoaderData()
-  console.log(loadedData)
   const handleCheckOut = (e) => {
     e.preventDefault();
     const form = e.target
@@ -30,14 +29,15 @@ const CheckOut = () => {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data)
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Your order has been saved in cart",
-          showConfirmButton: false,
-          timer: 1500
-        });
+        if(data.insertedId){
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Your order has been saved in cart",
+            showConfirmButton: false,
+            timer: 1500
+          });
+        }
     })
 
   };

@@ -3,7 +3,6 @@ import errorImg from "../../assets/images/login/login.svg"
 
 const ErrorPage = () => {
     const error = useRouteError()
-    console.log(error)
     return (
         <div>
             <h1 className="text-4xl font-bold text-red-500 text-center">{error.statusText}</h1>
