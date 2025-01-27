@@ -3,6 +3,7 @@ import logimg from "../../assets/images/login/login.svg"
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 const Login = () => {
@@ -34,8 +35,16 @@ const Login = () => {
               icon: "success",
               title: `${result.user.displayName || result.user.email} Signed in successfully`
             });
-            form.reset()
-            navigate(location?.state ? location?.state : "/")
+            const loggedInUser = result.user
+            console.log(loggedInUser)
+            const user = {email}
+            axios.post('http://localhost:5000/jwt',user,{withCredentials: true})
+            .then(res => {
+              if(res.data.success){
+                form.reset()
+                navigate(location?.state ? location?.state : "/")
+              }
+            })
         })
         .catch(error => {
             const Toast = Swal.mixin({
