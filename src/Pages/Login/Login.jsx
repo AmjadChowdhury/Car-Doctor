@@ -38,7 +38,7 @@ const Login = () => {
             const loggedInUser = result.user
             console.log(loggedInUser)
             const user = {email}
-            axios.post('http://localhost:5000/jwt',user,{withCredentials: true})
+            axios.post('https://car-doctor-server-three-topaz.vercel.app/jwt',user,{withCredentials: true})
             .then(res => {
               if(res.data.success){
                 form.reset()
