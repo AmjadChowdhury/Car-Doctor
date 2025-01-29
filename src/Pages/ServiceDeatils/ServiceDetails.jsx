@@ -13,7 +13,7 @@ const ServiceDetails = () => {
                     <img src={img} alt="" className="w-full rounded-lg" />
                     <h1 className="text-4xl font-extrabold m-2">{title}</h1>
                     <p className="m-2">{description}</p>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         {
                             facility.map((fac,idx) => <Facilities 
                             key={idx}
