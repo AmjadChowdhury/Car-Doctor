@@ -2,13 +2,15 @@ import { useContext } from "react";
 import logimg from "../../assets/images/login/login.svg"
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { FcGoogle } from "react-icons/fc";
+import { BsGithub } from "react-icons/bs";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 
 const Login = () => {
 
-    const {signIn} = useContext(AuthContext)
+    const {signIn,signInWithGoogle,signInWithGithub} = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
 
@@ -64,6 +66,27 @@ const Login = () => {
             });
         })
     }
+
+    const handleGoogleLogin = () => {
+      console.log('Google coming')
+      signInWithGoogle()
+      .then(result => {
+        console.log(result.user)
+      })
+      .catch(error => {
+        console.log(error.message)
+      })
+    }
+    const handleGithubLogin = () => {
+      console.log('Github coming')
+      signInWithGithub()
+      .then(result => {
+        console.log(result.user)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+    }
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row items-center">
@@ -99,7 +122,11 @@ const Login = () => {
             <div>
               <h1 className="text-center text-sm font-bold">You have no accout ?Plaese <Link to="/signup" className="text-orange-500">Register</Link></h1>
             </div>
-            <div className="form-control mt-6">
+            <div className="flex gap-2 justify-center">
+              <FcGoogle onClick={handleGoogleLogin} className="text-3xl font-bold"></FcGoogle>
+              <BsGithub onClick={handleGithubLogin} className="text-3xl font-bold"></BsGithub>
+            </div>
+            <div className="form-control mt-2">
               <input type="submit" value="LogIn" className="btn bg-orange-500 text-white text-lg font-extrabold" />
             </div>
           </form>
