@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { createUserWithEmailAndPassword, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import auth from "../Firebase/firebase.config";
+import axios from "axios";
 
 
 export const AuthContext = createContext()
@@ -13,14 +14,29 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth,currentUser=>{
+            const userEmail = currentUser?.email || user?.email
+            const loggedUser = {email : userEmail}
             setuser(currentUser)
-            console.log(currentUser)
+            // console.log(currentUser)
             setLoading(false)
+            //if user exist
+            if(currentUser){
+                axios.post('https://car-doctor-server-three-topaz.vercel.app/jwt',loggedUser,{withCredentials: true})
+                .then(res => {
+                    // console.log(res.data)
+                })
+            }
+            else{
+                axios.post('https://car-doctor-server-three-topaz.vercel.app/logout',loggedUser,{withCredentials: true})
+                .then(res => {
+                    // console.log(res.data)
+                })
+            }
         })
         return ()=>{
             return unSubscribe()
         }
-    },[])
+    },[user?.email])
     
     const createUser = (email,password) => {
         setLoading(true)

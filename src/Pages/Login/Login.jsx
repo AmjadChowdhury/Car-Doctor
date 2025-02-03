@@ -38,17 +38,8 @@ const Login = () => {
             result.user.displayName || result.user.email
           } Signed in successfully`,
         });
-        const loggedInUser = result.user;
-        console.log(loggedInUser);
-        const user = { email };
-        axios.post("http://localhost:5000/jwt", user, { withCredentials: true })
-          .then((res) => {
-            console.log(res.data);
-            if (res.data.success) {
-              form.reset();
-              navigate(location?.state ? location?.state : "/");
-            }
-          });
+        form.reset();
+        navigate(location?.state ? location?.state : "/")       
       })
       .catch((error) => {
         const Toast = Swal.mixin({
@@ -70,37 +61,37 @@ const Login = () => {
   };
 
   const handleGoogleLogin = () => {
-    console.log("Google coming");
+    // console.log("Google coming");
     signInWithGoogle()
       .then((result) => {
         const user = { email: result.user };
-        axios.post("http://localhost:5000/jwt", user, { withCredentials: true })
+        axios.post("https://car-doctor-server-three-topaz.vercel.app/jwt", user, { withCredentials: true })
           .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             if (res.data.success) {
               navigate(location?.state ? location?.state : "/");
             }
           });
       })
       .catch((error) => {
-        console.log(error.message);
+        // console.log(error.message);
       });
   };
   const handleGithubLogin = () => {
-    console.log("Github coming");
+    // console.log("Github coming");
     signInWithGithub()
       .then((result) => {
         const user = { email: result.user };
-        axios.post("http://localhost:5000/jwt", user, { withCredentials: true })
+        axios.post("https://car-doctor-server-three-topaz.vercel.app/jwt", user, { withCredentials: true })
           .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             if (res.data.success) {
               navigate(location?.state ? location?.state : "/");
             }
           });
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
   return (

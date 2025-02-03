@@ -33,16 +33,16 @@ const SignUp = () => {
 
     createUser(email, password)
       .then((result) => {
-        console.log(result.user);
+        // console.log(result.user);
         updateProfile(auth.currentUser, {
           displayName: name,
           photoURL: photo,
         })
           .then(() => {
-            console.log("profile update");
+            // console.log("profile update");
           })
           .catch((error) => {
-            console.log(error);
+            // console.log(error);
           });
         Swal.fire({
           title: `${name} register account successfully`,
@@ -53,7 +53,7 @@ const SignUp = () => {
         form.reset();
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
   return (

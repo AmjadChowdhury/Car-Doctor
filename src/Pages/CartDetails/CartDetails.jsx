@@ -8,7 +8,7 @@ const CartDetails = () => {
 
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:5000/bookings?email=${user.email}`,{withCredentials: true})
+    axios.get(`https://car-doctor-server-three-topaz.vercel.app/bookings?email=${user.email}`,{withCredentials: true})
       // .then((res) => res.json())
       // .then((data) => {
       //   setCartItems(data);

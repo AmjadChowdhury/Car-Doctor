@@ -15,7 +15,7 @@ const UserInfo = () => {
     const form = e.target
     const name = form.name.value
     const photo = form.photo.value
-    console.log(name,photo)
+    // console.log(name,photo)
     updateProfile(auth.currentUser,{
         displayName: name,
         photoURL: photo
