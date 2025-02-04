@@ -15,9 +15,9 @@ const ServiceCard = ({ service }) => {
         />
       </figure>
       <Link to={`/service/${_id}`}>
-      <div className="card-body items-center text-center">
-        <h2 className="card-title text-2xl font-extrabold uppercase">{title}</h2>
-        <div className="flex justify-between items-center text-xl font-bold uppercase text-orange-500">
+      <div className="card-body items-center text-center bg-gray-50 rounded-b-lg">
+        <h2 className="card-title text-sm lg:text-xl font-extrabold uppercase">{title}</h2>
+        <div className="flex justify-between items-center text-sm lg:text-base font-bold uppercase text-orange-500">
             <p className="flex items-center mr-10">Price : <FaDollarSign></FaDollarSign> {price}</p>
             <p><FaRegArrowAltCircleRight></FaRegArrowAltCircleRight></p>
         </div>

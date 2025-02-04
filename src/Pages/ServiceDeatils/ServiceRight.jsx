@@ -65,9 +65,9 @@ const ServiceRight = ({serviceCollection}) => {
         <div className="relative p-8">
             <div className="bg-white py-8 px-2 text-center  rounded-lg my-2">
                <p className="text-3xl font-bold"><span className="text-orange-500">Car Doctor </span>speacial</p>
-               <p>Save up to <span className="text-orange-500">60% off</span></p>
+               <p>Save up to <span className="text-orange-500 font-extrabold">60% off</span></p>
             </div>
-            <div className="absolute bottom-5 left-1/2 bg-orange-500 rounded-lg p-2">
+            <div className="absolute bottom-5 left-1/2 bg-orange-500 rounded-lg p-2 text-white font-bold">
                 <p>Get a Quote</p>
             </div>
         </div>
@@ -75,7 +75,7 @@ const ServiceRight = ({serviceCollection}) => {
 
       <div className="space-y-2">
         <p className="text-2xl font-bold flex items-center">Price : <FaDollarSign></FaDollarSign>{price}</p>
-        <Link to={`/bookings/${_id}`}><button className="btn btn-block bg-orange-500 text-white text-lg font-extrabold my-2">Proceed Checkout</button></Link>
+        <Link to={`/bookings/${_id}`}><button className="btn btn-block bg-orange-500 text-white text-lg font-extrabold my-2 hover:bg-blue-500">Proceed Checkout</button></Link>
         
       </div>
     </div>

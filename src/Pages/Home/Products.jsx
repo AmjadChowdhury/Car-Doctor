@@ -22,7 +22,7 @@ const Products = () => {
             <img src={prod1} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-md font-extrabold uppercase">
+            <h2 className="card-title text-sm lg:text-xl font-extrabold uppercase">
             Cools Led Light
             </h2>
           </div>
@@ -32,7 +32,7 @@ const Products = () => {
             <img src={prod2} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-md font-extrabold uppercase">
+            <h2 className="card-title text-sm lg:text-xl font-extrabold uppercase">
             Cools Led Light
             </h2>
           </div>
@@ -42,7 +42,7 @@ const Products = () => {
             <img src={prod3} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-md font-extrabold uppercase">
+            <h2 className="card-title text-sm lg:text-xl font-extrabold uppercase">
               Car Engine Filter
             </h2>
           </div>
@@ -52,7 +52,7 @@ const Products = () => {
             <img src={prod4} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-md font-extrabold uppercase">
+            <h2 className="card-title text-sm lg:text-xl font-extrabold uppercase">
               Car Engine Plug
             </h2>
           </div>
@@ -62,7 +62,7 @@ const Products = () => {
             <img src={prod5} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-md font-extrabold uppercase">
+            <h2 className="card-title text-sm lg:text-xl font-extrabold uppercase">
               Car Engine Plug
             </h2>
           </div>
@@ -72,7 +72,7 @@ const Products = () => {
             <img src={prod6} alt="" className="rounded-xl" />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title text-md font-extrabold uppercase">
+            <h2 className="card-title text-sm lg:text-xl font-extrabold uppercase">
               Car Engine Plug
             </h2>
           </div>

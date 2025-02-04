@@ -8,8 +8,8 @@ const ServiceDetails = () => {
     const { title,img,description,facility } = serviceCollection
     return (
         <div>
-            <div className="grid grid-cols-1 lg:grid-cols-3">
-                <div className="lg:col-span-2">
+            <div className="grid grid-cols-1 lg:grid-cols-3 pb-2">
+                <div className="lg:col-span-2 space-y-4">
                     <img src={img} alt="" className="w-full rounded-lg" />
                     <h1 className="text-4xl font-extrabold m-2">{title}</h1>
                     <p className="m-2">{description}</p>

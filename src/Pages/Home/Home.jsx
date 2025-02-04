@@ -12,7 +12,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const Home = () => {
     const {loading} = useContext(AuthContext)
     return (
-        <div>
+        <div className="space-y-2">
             <Banner></Banner>
             <About></About>
             {

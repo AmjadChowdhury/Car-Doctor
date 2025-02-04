@@ -5,7 +5,7 @@ import { FaStarHalfAlt } from "react-icons/fa";
 
 const CustomerRev = () => {
   return (
-    <div className="my-4">
+    <div className="pb-2">
       <div className="text-center">
         <h1 className="text-3xl lg:text-5xl font-extrabold text-orange-500">
           Testimonial

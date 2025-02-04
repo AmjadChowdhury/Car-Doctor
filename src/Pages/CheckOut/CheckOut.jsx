@@ -102,12 +102,15 @@ const CheckOut = () => {
             </div>
           </div>
 
-          <div className="flex">
+          <div className="form-control flex">
+          <label className="label">
+                <span className="label-text text-xl font-bold">Suggestion</span>
+              </label>
             <input
               name="message"
               type="text"
-              placeholder="Any Suggestion"
-              className="input input-bordered flex-1 mt-5"
+              placeholder=""
+              className="input input-bordered w-full"
               required
             />
           </div>

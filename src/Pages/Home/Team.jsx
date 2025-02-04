@@ -17,13 +17,13 @@ const Team = () => {
           <figure className="px-10 pt-10 h-full">
             <img src={team1} alt="" className="rounded-xl" />
           </figure>
-          <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-extrabold uppercase">
+          <div className="card-body items-center">
+            <h2 className="card-title text-sm lg:text-xl font-extrabold uppercase">
               Car Engine Plug
             </h2>
-            <div className="flex justify-between items-center text-xl font-bold uppercase text-orange-500">
-              <p className="flex items-center mr-10">Engine Expert</p>
-            </div>
+            <p className="flex justify-between items-center text-sm lg:text-base font-bold uppercase text-orange-500">
+              Engine Expert
+            </p>
           </div>
         </div>
 
@@ -31,13 +31,13 @@ const Team = () => {
           <figure className="px-10 pt-10 h-full">
             <img src={team2} alt="" className="rounded-xl" />
           </figure>
-          <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-extrabold uppercase">
+          <div className="card-body items-center">
+            <h2 className="card-title text-sm lg:text-xl font-extrabold uppercase">
               Car Engine Plug
             </h2>
-            <div className="flex justify-between items-center text-xl font-bold uppercase text-orange-500">
-              <p className="flex items-center mr-10">Engine Expert</p>
-            </div>
+            <p className="flex justify-between items-center text-sm lg:text-base font-bold uppercase text-orange-500">
+              Engine Expert
+            </p>
           </div>
         </div>
 
@@ -45,13 +45,13 @@ const Team = () => {
           <figure className="px-10 pt-10 h-full">
             <img src={team3} alt="" className="rounded-xl" />
           </figure>
-          <div className="card-body items-center text-center">
-            <h2 className="card-title text-2xl font-extrabold uppercase">
+          <div className="card-body items-center">
+            <h2 className="card-title text-sm lg:text-xl font-extrabold uppercase">
               Car Engine Plug
             </h2>
-            <div className="flex justify-between items-center text-xl font-bold uppercase text-orange-500">
-              <p className="flex items-center mr-10">Engine Expert</p>
-            </div>
+            <p className="flex justify-between items-center text-sm lg:text-base font-bold uppercase text-orange-500">
+              Engine Expert
+            </p>
           </div>
         </div>
       </div>
