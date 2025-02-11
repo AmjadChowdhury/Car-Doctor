@@ -148,5 +148,155 @@
                 "details": "Customer satisfaction is at the heart of what we do. Our dedicated team goes the extra mile to ensure you receive the best experience from start to finish. With personalized care, friendly support, and a commitment to resolving any issues, we make sure every visit is a positive one."
             }
         ]
-    }
+    },
+    {
+        "service_id": "07",
+        "title": "Premium Car Wash",
+        "img": "https://i.ibb.co.com/rGxZDfYL/service5.jpg",
+        "price": "40.00",
+        "description": "Get your car sparkling clean with our premium car wash service. Includes exterior and interior cleaning.",
+        "facility": [
+          {
+            "name": "Exterior Wash",
+            "details": "Thorough cleaning of your car's exterior, removing dirt and grime."
+          },
+          {
+            "name": "Interior Vacuum",
+            "details": "Complete vacuuming of seats, carpets, and trunk area."
+          },
+          {
+            "name": "Tire Shine",
+            "details": "Tires cleaned and polished for a fresh look."
+          },
+          {
+            "name": "Wax Coating",
+            "details": "Protect your car’s paint with a high-quality wax application."
+          }
+        ]
+      },
+      {
+        "service_id": "08",
+        "title": "Oil Change Service",
+        "img": "https://i.ibb.co.com/zVcjqCpW/service6.jpg",
+        "price": "50.00",
+        "description": "Ensure your car runs smoothly with our expert oil change service using high-quality engine oil.",
+        "facility": [
+          {
+            "name": "Synthetic Oil",
+            "details": "Premium synthetic oil to enhance engine performance."
+          },
+          {
+            "name": "Oil Filter Replacement",
+            "details": "Replacing the oil filter for a cleaner engine."
+          },
+          {
+            "name": "Fluid Top-Up",
+            "details": "Checking and refilling necessary fluids like coolant and brake fluid."
+          },
+          {
+            "name": "Free Inspection",
+            "details": "A quick car health check with every oil change."
+          }
+        ]
+      },
+      {
+        "service_id": "09",
+        "title": "Brake Inspection & Repair",
+        "img": "https://i.ibb.co.com/M53MqSvq/service7.jpg",
+        "price": "60.00",
+        "description": "Stay safe on the road with our thorough brake inspection and repair services.",
+        "facility": [
+          {
+            "name": "Brake Pad Check",
+            "details": "Inspection and replacement of worn-out brake pads."
+          },
+          {
+            "name": "Rotor Resurfacing",
+            "details": "Smoothing out rotors for improved braking performance."
+          },
+          {
+            "name": "Fluid Check",
+            "details": "Checking and replacing brake fluid if necessary."
+          },
+          {
+            "name": "ABS Diagnostics",
+            "details": "Full diagnostics of the ABS system for safety assurance."
+          }
+        ]
+      },
+      {
+        "service_id": "10",
+        "title": "Tire Rotation & Balancing",
+        "img": "https://i.ibb.co.com/twdqYtJz/service8.jpg",
+        "price": "35.00",
+        "description": "Extend the life of your tires with our professional tire rotation and balancing services.",
+        "facility": [
+          {
+            "name": "Tire Rotation",
+            "details": "Repositioning tires for even wear and longer lifespan."
+          },
+          {
+            "name": "Wheel Balancing",
+            "details": "Ensuring smooth driving by balancing all four wheels."
+          },
+          {
+            "name": "Alignment Check",
+            "details": "Assessing and adjusting wheel alignment for better handling."
+          },
+          {
+            "name": "Pressure Adjustment",
+            "details": "Checking and adjusting tire pressure for optimal performance."
+          }
+        ]
+      },
+      {
+        "service_id": "11",
+        "title": "Battery Replacement",
+        "img": "https://i.ibb.co.com/S7nrLFsQ/service9.jpg",
+        "price": "80.00",
+        "description": "Avoid unexpected breakdowns with our fast and reliable car battery replacement service.",
+        "facility": [
+          {
+            "name": "Battery Testing",
+            "details": "Comprehensive check to determine battery health."
+          },
+          {
+            "name": "Terminal Cleaning",
+            "details": "Removing corrosion to improve battery performance."
+          },
+          {
+            "name": "New Battery Installation",
+            "details": "Replacing your old battery with a high-quality new one."
+          },
+          {
+            "name": "Warranty Included",
+            "details": "Comes with a manufacturer’s warranty for peace of mind."
+          }
+        ]
+      },
+      {
+        "service_id": "12",
+        "title": "Full Car Detailing",
+        "img": "https://i.ibb.co.com/VchmsZ5b/service10.jpg",
+        "price": "120.00",
+        "description": "Give your car a showroom shine with our full detailing service, inside and out.",
+        "facility": [
+          {
+            "name": "Hand Wash",
+            "details": "Careful hand wash to remove dirt without damaging paint."
+          },
+          {
+            "name": "Interior Deep Clean",
+            "details": "Thorough cleaning of seats, dashboard, and carpets."
+          },
+          {
+            "name": "Wax & Polish",
+            "details": "Adding shine and protection to your car’s exterior."
+          },
+          {
+            "name": "Engine Bay Cleaning",
+            "details": "Removing grease and dust from the engine area."
+          }
+        ]
+      }
 ]

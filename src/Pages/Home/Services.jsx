@@ -1,13 +1,48 @@
 import { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
+import "./Services.css";
 
 const Services = () => {
   const [services, setServices] = useState([]);
+  const [count, setCount] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const numberOfPages = Math.ceil(count / itemsPerPage);
+  const pages = [];
+  for (let i = 0; i < numberOfPages; i++) {
+    pages.push(i);
+  }
+  // console.log(pages)
+
   useEffect(() => {
-    fetch("https://car-doctor-server-three-topaz.vercel.app/services")
+    fetch(`https://car-doctor-server-three-topaz.vercel.app/services?page=${currentPage}&size=${itemsPerPage}`)
       .then((res) => res.json())
       .then((data) => setServices(data));
+  }, [currentPage,itemsPerPage]);
+  useEffect(() => {
+    fetch("https://car-doctor-server-three-topaz.vercel.app/servicesCount")
+      .then((res) => res.json())
+      .then((data) => setCount(data.count));
   }, []);
+
+  const handleItemsPerpage = (e) => {
+    console.log(e.target.value);
+    const val = parseInt(e.target.value);
+    setItemsPerPage(val);
+    setCurrentPage(0);
+  };
+  const handlePrev = () => {
+    if (currentPage > 0) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+  const handleNext = () => {
+    if (currentPage < numberOfPages - 1) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
   return (
     <div>
       <div className="text-center">
@@ -25,6 +60,35 @@ const Services = () => {
         {services.map((service) => (
           <ServiceCard key={service._id} service={service}></ServiceCard>
         ))}
+      </div>
+      <div className="flex justify-center my-4 pagination">
+        <button onClick={handlePrev} className="btn mr-1">
+          Prev
+        </button>
+        {pages.map((page) => (
+          <button
+            key={page}
+            onClick={() => setCurrentPage(page)}
+            className={`btn mr-1 ${currentPage === page ? "selected" : ''}`}
+          >
+            {page}
+          </button>
+        ))}
+        <button onClick={handleNext} className="btn mr-1">
+          Next
+        </button>
+        <select
+          value={itemsPerPage}
+          onChange={handleItemsPerpage}
+          className="btn"
+          name=""
+          id=""
+        >
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
       </div>
     </div>
   );

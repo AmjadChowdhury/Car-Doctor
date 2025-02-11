@@ -1,0 +1,4 @@
+.pagination .selected{
+    background-color: orange;
+    color: white;
+}
