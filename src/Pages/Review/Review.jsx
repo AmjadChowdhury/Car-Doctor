@@ -1,46 +1,52 @@
+import axios from "axios";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const CheckOut = () => {
+const Review = () => {
   const { user } = useContext(AuthContext);
-  const loadedData = useLoaderData();
   const handleCheckOut = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const title = loadedData.title;
-    const img = loadedData.img;
-    const price = loadedData.price;
-    const date = form.date.value;
-    const message = form.message.value;
-    const email = user?.email;
+    const profession = form.profession.value;
+    const review = form.review.value;
+    const userImg = user?.photoURL;
+    const rating = form.rating.value;
 
-    const order = { name, title, date, email, img, price, message };
+    const servicesReview = { name, userImg, profession, review, rating };
+    console.log(servicesReview);
 
-    fetch("https://car-doctor-server-three-topaz.vercel.app/bookings", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(order),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          Swal.fire({
+    axios
+      .post(
+        "https://car-doctor-server-three-topaz.vercel.app/servicesReview",
+        servicesReview
+      )
+      .then((res) => {
+        if (res.data.insertedId) {
+          const Toast = Swal.mixin({
+            toast: true,
             position: "top-end",
-            icon: "success",
-            title: "Your order has been saved in cart",
             showConfirmButton: false,
-            timer: 1500,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            },
+          });
+          Toast.fire({
+            icon: "success",
+            title: `${user?.displayName} added review`,
           });
         }
       });
   };
   return (
     <div className="mb-4">
+      <h1 className="text-2xl font-extrabold text-center my-2">
+        Review of <span className="text-orange-500">{user?.displayName}</span>
+      </h1>
       <div className="card bg-base-100 w-full  shrink-0 border-2 border-orange-200">
         <form className="card-body" onSubmit={handleCheckOut}>
           <div className="flex flex-col lg:flex-row gap-2">
@@ -51,21 +57,19 @@ const CheckOut = () => {
               <input
                 name="name"
                 type="text"
-                defaultValue={user.displayName}
-                placeholder="name"
+                defaultValue={user?.displayName}
                 className="input input-bordered"
                 required
               />
             </div>
             <div className="form-control flex-1">
               <label className="label">
-                <span className="label-text text-xl font-bold">Title</span>
+                <span className="label-text text-xl font-bold">Email</span>
               </label>
               <input
-                name="title"
-                type="text"
-                placeholder=""
-                defaultValue={loadedData.title}
+                name="email"
+                type="email"
+                defaultValue={user?.email}
                 className="input input-bordered"
                 required
               />
@@ -75,27 +79,26 @@ const CheckOut = () => {
           <div className="flex flex-col lg:flex-row gap-2">
             <div className="form-control flex-1">
               <label className="label">
-                <span className="label-text text-xl font-bold">Email</span>
+                <span className="label-text text-xl font-bold">
+                  User Profession
+                </span>
               </label>
               <input
-                name="email"
-                type="email"
-                placeholder="email"
-                defaultValue={user.email}
-                className="input input-bordered"
+                name="profession"
+                type="text"
+                placeholder="Ex:Businessman"
+                className="input input-bordered w-full"
                 required
               />
             </div>
             <div className="form-control flex-1">
               <label className="label">
-                <span className="label-text text-xl font-bold">
-                  Delibary Date
-                </span>
+                <span className="label-text text-xl font-bold">Rating</span>
               </label>
               <input
-                name="date"
-                type="date"
-                placeholder=""
+                name="rating"
+                type="text"
+                placeholder="Out of 5"
                 className="input input-bordered w-full"
                 required
               />
@@ -105,22 +108,21 @@ const CheckOut = () => {
           <div className="form-control flex">
             <label className="label">
               <span className="label-text text-xl font-bold">
-                Problem Description
+                Service Review
               </span>
             </label>
             <input
-              name="message"
+              name="review"
               type="text"
-              placeholder="short info"
+              placeholder="Give a review of the service in minimum 5-6 lines"
               className="input input-bordered w-full"
               required
             />
           </div>
-
           <div className="form-control mt-6">
             <input
               type="submit"
-              value="Order Confirm"
+              value="Review Done"
               className="btn bg-orange-500 text-white text-lg font-extrabold"
             />
           </div>
@@ -130,4 +132,4 @@ const CheckOut = () => {
   );
 };
 
-export default CheckOut;
+export default Review;

@@ -6,27 +6,42 @@ import "./Navbar.css";
 import Swal from "sweetalert2";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const navItems = (
     <>
       <NavLink to="/">
-        <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">Home</li>
+        <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">
+          Home
+        </li>
       </NavLink>
       {!user && (
         <>
           <NavLink to="/login">
-            <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">Login</li>
+            <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">
+              Login
+            </li>
           </NavLink>
           <NavLink to="/signup">
-            <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">sign up</li>
+            <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">
+              sign up
+            </li>
           </NavLink>
         </>
       )}
-      {
-        user && <NavLink to="/cart">
-        <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">Cart</li>
-      </NavLink>
-      }
+      {user && (
+        <>
+          <NavLink to="/cart">
+            <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">
+              Cart
+            </li>
+          </NavLink>
+          <NavLink to="/review">
+            <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">
+              Review
+            </li>
+          </NavLink>
+        </>
+      )}
     </>
   );
   const handleLogout = () => {
@@ -41,13 +56,13 @@ const Navbar = () => {
           didOpen: (toast) => {
             toast.onmouseenter = Swal.stopTimer;
             toast.onmouseleave = Swal.resumeTimer;
-          }
+          },
         });
         Toast.fire({
           icon: "success",
-          title: "Logout Successfully Done!"
+          title: "Logout Successfully Done!",
         });
-        navigate("/")
+        navigate("/");
       })
       .catch((error) => {
         // console.log(error);
@@ -90,15 +105,15 @@ const Navbar = () => {
       <div className="navbar-end">
         {user && (
           <Link to="/userInfo">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar mr-2"
-          >
-            <div className="w-10 rounded-full">
-              <img alt="Chobi nai kno!" src={user.photoURL} />
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar mr-2"
+            >
+              <div className="w-10 rounded-full">
+                <img alt="Chobi nai kno!" src={user.photoURL} />
+              </div>
             </div>
-          </div>
           </Link>
         )}
         {user ? (
