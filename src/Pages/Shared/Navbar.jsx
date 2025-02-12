@@ -10,21 +10,21 @@ const Navbar = () => {
   const navItems = (
     <>
       <NavLink to="/">
-        <li className="text-lg p-2 rounded-lg font-extrabold">Home</li>
+        <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">Home</li>
       </NavLink>
       {!user && (
         <>
           <NavLink to="/login">
-            <li className="text-lg p-2 rounded-lg font-extrabold">Login</li>
+            <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">Login</li>
           </NavLink>
           <NavLink to="/signup">
-            <li className="text-lg p-2 rounded-lg font-extrabold">sign up</li>
+            <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">sign up</li>
           </NavLink>
         </>
       )}
       {
         user && <NavLink to="/cart">
-        <li className="text-lg p-2 rounded-lg font-extrabold">Cart</li>
+        <li className="text-sm lg:text-lg p-2 rounded-lg font-extrabold">Cart</li>
       </NavLink>
       }
     </>
@@ -80,8 +80,8 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <div>
-          <img src={logo} alt="" />
+        <div className="h-8 lg:h-16">
+          <img src={logo} alt="" className="h-full w-full" />
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -103,7 +103,7 @@ const Navbar = () => {
         )}
         {user ? (
           <button
-            className="btn btn-outline text-orange-500 border-2 border-orange-500 text-lg font-extrabold"
+            className="btn btn-outline text-orange-500 hover:text-white border-2 border-orange-500 hover:border-orange-500 hover:bg-orange-500 text-sm lg:text-lg font-extrabold"
             onClick={handleLogout}
           >
             Logout
@@ -111,7 +111,7 @@ const Navbar = () => {
         ) : (
           <Link
             to="/login"
-            className="btn btn-outline text-orange-500 border-2 border-orange-500 text-lg font-extrabold"
+            className="btn btn-outline text-orange-500 hover:text-white border-2 border-orange-500 hover:border-orange-500 hover:bg-orange-500 text-sm lg:text-lg font-extrabold"
           >
             LogIn
           </Link>
