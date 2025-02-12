@@ -17,7 +17,7 @@ const AuthProvider = ({children}) => {
             const userEmail = currentUser?.email || user?.email
             const loggedUser = {email : userEmail}
             setuser(currentUser)
-            // console.log(currentUser)
+            console.log(currentUser)
             setLoading(false)
             //if user exist
             if(currentUser){
