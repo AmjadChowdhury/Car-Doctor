@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import "./Services.css";
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { FaRegArrowAltCircleLeft } from "react-icons/fa";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -63,7 +65,7 @@ const Services = () => {
       </div>
       <div className="flex justify-center my-4 pagination">
         <button onClick={handlePrev} className="btn mr-1">
-          Prev
+          <FaRegArrowAltCircleLeft></FaRegArrowAltCircleLeft>
         </button>
         {pages.map((page) => (
           <button
@@ -75,12 +77,12 @@ const Services = () => {
           </button>
         ))}
         <button onClick={handleNext} className="btn mr-1">
-          Next
+          <FaRegArrowAltCircleRight></FaRegArrowAltCircleRight>
         </button>
         <select
           value={itemsPerPage}
           onChange={handleItemsPerpage}
-          className="btn"
+          className=""
           name=""
           id=""
         >
