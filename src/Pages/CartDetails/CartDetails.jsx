@@ -22,6 +22,14 @@ const CartDetails = () => {
         <h1 className="text-2xl font-extrabold text-center"><span className="text-orange-500">{user?.displayName}</span> Added total <span className="text-orange-500">{cartItems.length} </span>service</h1>
       <table className="table">
         <tbody>
+          <tr className="border-b-2 border-dashed border-b-orange-500">
+             <th></th>
+             <th className="lg:text-xl font-extrabold">Serial</th>
+             <th className="lg:text-xl font-extrabold">Problem</th>
+             <th className="lg:text-xl font-extrabold">Delivery</th>
+          </tr>
+        </tbody>
+        <tbody>
           {
             cartItems.map(cart => <SmallCart
                  key={cart._id}

@@ -40,9 +40,6 @@ const SmallCart = ({ cart,cartItems, setCartItems }) => {
   return (
     <tr>
       <th onClick={handleDelete}>
-        {/* <label>
-          <input type="checkbox" className="checkbox" />
-        </label> */}
         <ImCross className="text-2xl text-red-500"></ImCross>
       </th>
       <td>
@@ -60,11 +57,6 @@ const SmallCart = ({ cart,cartItems, setCartItems }) => {
       </td>
       <td>{message}</td>
       <td>{date}</td>
-      <th>
-        <button className="btn btn-ghost bg-orange-500 text-white p-2 font-extrabold">
-          Pending
-        </button>
-      </th>
     </tr>
   );
 };

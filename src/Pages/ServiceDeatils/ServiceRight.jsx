@@ -75,7 +75,7 @@ const ServiceRight = ({serviceCollection}) => {
 
       <div className="space-y-2">
         <p className="text-2xl font-bold flex items-center">Price : <FaDollarSign></FaDollarSign>{price}</p>
-        <Link to={`/bookings/${_id}`}><button className="btn btn-block bg-orange-500 text-white text-lg font-extrabold my-2 hover:bg-blue-500">Proceed Checkout</button></Link>
+        <Link to={`/bookings/${_id}`}><button className="btn btn-block bg-orange-400 text-white text-lg font-extrabold my-2 hover:bg-orange-500">Proceed Checkout</button></Link>
         
       </div>
     </div>
