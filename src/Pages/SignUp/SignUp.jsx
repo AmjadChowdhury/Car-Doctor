@@ -6,16 +6,22 @@ import { updateProfile } from "firebase/auth";
 import auth from "../../Firebase/firebase.config";
 import { Link } from "react-router-dom";
 
+const image_hosting_key = import.meta.env.VITE_imgbb_KEY;
+const image_hosting_Api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
+
+
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
+
 
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    const photo = form.photo.value;
+    // const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
+    const photoFile = form.photo.files[0];
     if(password.length<6){
       return Swal.fire({
         icon: "error",
@@ -31,12 +37,22 @@ const SignUp = () => {
       });
     }
 
-    createUser(email, password)
+    const formData = new FormData();
+    formData.append("image", photoFile);
+
+    fetch(image_hosting_Api, {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.json())
+    .then(imgData => {
+      const photoURL = imgData.data.display_url;
+      createUser(email, password)
       .then((result) => {
         // console.log(result.user);
         updateProfile(auth.currentUser, {
           displayName: name,
-          photoURL: photo,
+          photoURL: photoURL,
         })
           .then(() => {
             // console.log("profile update");
@@ -55,6 +71,32 @@ const SignUp = () => {
       .catch((error) => {
         // console.log(error);
       });
+  })
+
+    // createUser(email, password)
+    //   .then((result) => {
+    //     // console.log(result.user);
+    //     updateProfile(auth.currentUser, {
+    //       displayName: name,
+    //       photoURL: photo,
+    //     })
+    //       .then(() => {
+    //         // console.log("profile update");
+    //       })
+    //       .catch((error) => {
+    //         // console.log(error);
+    //       });
+    //     Swal.fire({
+    //       title: `${name} register account successfully`,
+    //       text: "Now,you can log In",
+    //       icon: "success",
+    //       confirmButtonText: "Cool",
+    //     });
+    //     form.reset();
+    //   })
+    //   .catch((error) => {
+    //     // console.log(error);
+    //   });
   };
   return (
     <div className="hero min-h-screen">
@@ -106,12 +148,13 @@ const SignUp = () => {
               </label>
               <input
                 name="photo"
-                type="text"
+                type="file"
                 placeholder="photo"
-                className="input input-bordered"
+                className="file-input w-full bg-orange-500 text-white"
                 required
               />
             </div>
+            
             <div>
               <h1 className="text-center text-sm font-bold">
                 Already have an accout !!Plaese
