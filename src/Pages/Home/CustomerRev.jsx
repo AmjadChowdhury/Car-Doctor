@@ -47,7 +47,7 @@ const CustomerRev = () => {
   return (
     <div className="pb-2">
       <div className="text-center">
-        <h1 className="text-3xl lg:text-5xl font-extrabold text-orange-500">
+        <h1 className="text-3xl lg:text-5xl font-extrabold text-[#123458]">
           Testimonial
         </h1>
         <p className="text-2xl lg:text-4xl font-bold mt-4">
@@ -62,7 +62,7 @@ const CustomerRev = () => {
         {reviews.map((review) => (
           <div
             key={review._id}
-            className="space-y-2 border-2 border-b-4 border-b-[#000080] p-4 rounded-lg flex flex-col"
+            className="space-y-2 border-2 border-dotted border-b-[#000080] p-4 rounded-lg flex flex-col border-[#D4C9BE]"
           >
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-4">
@@ -76,7 +76,7 @@ const CustomerRev = () => {
                   <h3 className="text-base-300">{review.profession}</h3>
                 </div>
               </div>
-              <LuQuote className="text-2xl text-orange-500"></LuQuote>
+              <LuQuote className="text-2xl text-[#123458]"></LuQuote>
             </div>
             <p className="flex-1">{review.review}</p>
             <div className="flex gap-2">
@@ -88,20 +88,20 @@ const CustomerRev = () => {
               {Array.from({ length: 5 }).map((_, index) => {
                 if (index + 1 <= review.rating) {
                   return (
-                    <FaStar key={index} className="text-orange-500 text-xl" />
+                    <FaStar key={index} className="text-[#123458] text-xl" />
                   );
                 } else if (index + 0.5 <= review.rating) {
                   return (
                     <FaStarHalfAlt
                       key={index}
-                      className="text-orange-500 text-xl"
+                      className="text-[#123458] text-xl"
                     />
                   );
                 } else {
                   return (
                     <FaRegStar
                       key={index}
-                      className="text-orange-500 text-xl"
+                      className="text-[#123458] text-xl"
                     />
                   );
                 }

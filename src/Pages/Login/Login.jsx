@@ -100,7 +100,7 @@ const Login = () => {
         <div className="text-center lg:text-left w-1/2">
           <img src={logimg} alt="" />
         </div>
-        <div className="card bg-base-100 w-full max-w-sm shrink-0 border-2 border-orange-200">
+        <div className="card bg-base-100 w-full max-w-sm shrink-0 border-2 border-[#D4C9BE]">
           <form className="card-body" onSubmit={handleLogin}>
             <div className="form-control">
               <label className="label">
@@ -129,7 +129,7 @@ const Login = () => {
             <div>
               <h1 className="text-center text-sm font-bold">
                 You have no accout ?Plaese{" "}
-                <Link to="/signup" className="text-orange-500">
+                <Link to="/signup" className="text-[#123458] underline">
                   Register
                 </Link>
               </h1>
@@ -148,7 +148,7 @@ const Login = () => {
               <input
                 type="submit"
                 value="LogIn"
-                className="btn bg-orange-500 text-white text-lg font-extrabold"
+                className="btn bg-[#123458] text-white text-lg font-extrabold"
               />
             </div>
           </form>

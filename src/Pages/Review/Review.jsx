@@ -45,7 +45,7 @@ const Review = () => {
   return (
     <div className="mb-4">
       <h1 className="text-2xl font-extrabold text-center my-2">
-        Review of <span className="text-orange-500">{user?.displayName}</span>
+        Review of <span className="text-[#123458]">{user?.displayName}</span>
       </h1>
       <div className="card bg-base-100 w-full  shrink-0 border-2 border-orange-200">
         <form className="card-body" onSubmit={handleCheckOut}>
@@ -123,7 +123,7 @@ const Review = () => {
             <input
               type="submit"
               value="Review Done"
-              className="btn bg-orange-500 text-white text-lg font-extrabold"
+              className="btn bg-[#123458] text-white text-lg font-extrabold"
             />
           </div>
         </form>

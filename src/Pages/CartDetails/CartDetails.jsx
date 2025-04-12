@@ -19,10 +19,10 @@ const CartDetails = () => {
   }, [user]);
   return (
     <div className="overflow-x-auto">
-        <h1 className="text-2xl font-extrabold text-center"><span className="text-orange-500">{user?.displayName}</span> Added total <span className="text-orange-500">{cartItems.length} </span>service</h1>
+        <h1 className="text-2xl font-extrabold text-center"><span className="text-[#123458]">{user?.displayName}</span> Added total <span className="text-[#123458]">{cartItems.length} </span>service</h1>
       <table className="table">
         <tbody>
-          <tr className="border-b-2 border-dashed border-b-orange-500">
+          <tr className="border-b-2 border-dashed border-b-[#123458]">
              <th></th>
              <th className="lg:text-xl font-extrabold">Serial</th>
              <th className="lg:text-xl font-extrabold">Problem</th>

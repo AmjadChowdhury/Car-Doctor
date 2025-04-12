@@ -16,8 +16,8 @@ const Banner = () => {
             <h2 className="text-4xl lg:text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">Keep your car in top shape with CarDoctor – expert service, trusted care, and reliable performance every time!</p>
             <div>
-                <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
-                <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
+                <button className="btn bg-[#123458] font-extrabold mr-6 mb-2 text-white border-[#D4C9BE] border-2">Discover More</button>
+                <button className="btn btn-outline text-white font-extrabold border-2 border-[#D4C9BE]">Latest Project</button>
             </div>
           </div>
         </div>
@@ -40,8 +40,8 @@ const Banner = () => {
             <h2 className="text-4xl lg:text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">Keep your car in top shape with CarDoctor – expert service, trusted care, and reliable performance every time!</p>
             <div>
-                <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
-                <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
+                <button className="btn bg-[#123458] font-extrabold mr-6 mb-2 text-white border-[#D4C9BE] border-2">Discover More</button>
+                <button className="btn btn-outline text-white font-extrabold border-2 border-[#D4C9BE]">Latest Project</button>
             </div>
           </div>
         </div>
@@ -64,8 +64,8 @@ const Banner = () => {
             <h2 className="text-4xl lg:text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">Keep your car in top shape with CarDoctor – expert service, trusted care, and reliable performance every time!</p>
             <div>
-                <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
-                <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
+                <button className="btn bg-[#123458] font-extrabold mr-6 mb-2 text-white border-[#D4C9BE] border-2">Discover More</button>
+                <button className="btn btn-outline text-white font-extrabold border-2 border-[#D4C9BE]">Latest Project</button>
             </div>
           </div>
         </div>
@@ -88,8 +88,8 @@ const Banner = () => {
             <h2 className="text-4xl lg:text-6xl font-extrabold">Affordable Price For Car Servicing</h2>
             <p className="text-xl">Keep your car in top shape with CarDoctor – expert service, trusted care, and reliable performance every time!</p>
             <div>
-                <button className="btn bg-orange-500 font-extrabold mr-6 mb-2 text-white border-orange-200 border-2">Discover More</button>
-                <button className="btn btn-outline text-orange-500 font-extrabold border-2 border-orange-500">Latest Project</button>
+                <button className="btn bg-[#123458] font-extrabold mr-6 mb-2 text-white border-[#D4C9BE] border-2">Discover More</button>
+                <button className="btn btn-outline text-white font-extrabold border-2 border-[#D4C9BE]">Latest Project</button>
             </div>
           </div>
         </div>

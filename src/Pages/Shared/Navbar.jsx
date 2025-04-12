@@ -1,5 +1,5 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/carDoctorMain.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import "./Navbar.css";
@@ -118,7 +118,7 @@ const Navbar = () => {
         )}
         {user ? (
           <button
-            className="btn btn-outline text-orange-500 hover:text-white border-2 border-orange-500 hover:border-orange-500 hover:bg-orange-500 text-sm lg:text-lg font-extrabold"
+            className="btn btn-outline text-[#123458] hover:text-white border-2 border-[#123458] hover:border-[#123458] hover:bg-[#123458] text-sm lg:text-lg font-extrabold"
             onClick={handleLogout}
           >
             Logout
@@ -126,7 +126,7 @@ const Navbar = () => {
         ) : (
           <Link
             to="/login"
-            className="btn btn-outline text-orange-500 hover:text-white border-2 border-orange-500 hover:border-orange-500 hover:bg-orange-500 text-sm lg:text-lg font-extrabold"
+            className="btn btn-outline text-[#123458] hover:text-white border-2 border-[#123458] hover:border-[#123458] hover:bg-[#123458] text-sm lg:text-lg font-extrabold"
           >
             LogIn
           </Link>

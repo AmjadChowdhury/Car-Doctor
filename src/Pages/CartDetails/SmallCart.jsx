@@ -40,7 +40,7 @@ const SmallCart = ({ cart,cartItems, setCartItems }) => {
   return (
     <tr>
       <th onClick={handleDelete}>
-        <ImCross className="text-2xl text-red-500"></ImCross>
+        <ImCross className="text-2xl text-[#123458]"></ImCross>
       </th>
       <td>
         <div className="flex items-center gap-3">

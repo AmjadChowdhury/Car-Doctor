@@ -41,7 +41,7 @@ const CheckOut = () => {
   };
   return (
     <div className="mb-4">
-      <div className="card bg-base-100 w-full  shrink-0 border-2 border-orange-200">
+      <div className="card bg-base-100 w-full  shrink-0 border-2 border-[#D4C9BE]">
         <form className="card-body" onSubmit={handleCheckOut}>
           <div className="flex flex-col lg:flex-row gap-2">
             <div className="form-control flex-1">
@@ -121,7 +121,7 @@ const CheckOut = () => {
             <input
               type="submit"
               value="Order Confirm"
-              className="btn bg-orange-500 text-white text-lg font-extrabold"
+              className="btn bg-[#123458] text-white text-lg font-extrabold"
             />
           </div>
         </form>

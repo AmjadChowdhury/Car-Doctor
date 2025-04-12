@@ -1,10 +1,10 @@
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/carDoctorMain.jpg";
 
 const Footer = () => {
   return (
     <footer className="footer bg-base-200 text-base-content p-10">
       <aside>
-        <img src={logo} alt="" />
+        <img src={logo} alt="" className="w-24" />
         <p>
           Amjad & Ershad Industries Ltd.
           <br />
